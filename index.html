@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Razik Project — Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-page">
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="loader-bg">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+    <div class="loader-content">
+      <div class="loader-logo">R</div>
+      <div class="loader-sub">Memuat Projek...</div>
+      <div class="loader-bar-wrap"><div class="loader-bar-fill"></div></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- STICKY NAV (landing — only theme toggle) -->
+  <nav class="floating-nav landing-nav">
+    <div class="nav-right">
+      <button class="nav-btn theme-btn" id="themeToggle" title="Ganti Tema">
+        <span id="themeIcon">💡</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LANDING CONTENT -->
+  <main class="landing-main">
+    <div class="landing-grid"></div>
+    <div class="landing-glow"></div>
+    <div class="landing-content">
+      <p class="welcome-small">Welcome to the razik project</p>
+      <h1 class="welcome-big" data-text="Woi ayo masuk">Woi ayo masuk</h1>
+      <button class="pencet-btn" id="pencetBtn">
+        <span>✦&nbsp;&nbsp;Pencet&nbsp;&nbsp;✦</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Fragmentation overlay -->
+  <div id="fragOverlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

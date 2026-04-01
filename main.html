@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Projek Razik — Materi HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="main-page">
+
+  <!-- ══ STICKY FLOATING NAV (always follows scroll) ══ -->
+  <nav class="floating-nav" id="floatingNav">
+    <a class="nav-brand" href="index.html" title="Kembali ke landing">
+      <span class="nav-brand-dot"></span>
+      RAZIK
+    </a>
+    <div class="nav-right">
+      <button class="nav-btn theme-btn" id="themeToggle" title="Ganti Tema">
+        <span id="themeIcon">💡</span>
+      </button>
+      <button class="nav-btn" id="menuBtn" title="Menu" aria-label="Buka menu">
+        <div class="menu-lines">
+          <span></span><span></span><span></span>
+        </div>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ MENU BACKDROP ══ -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <!-- ══ SIDE MENU ══ -->
+  <nav class="side-menu" id="sideMenu" aria-label="Menu Profil">
+    <div class="menu-inner">
+
+      <!-- Profile header -->
+      <div class="menu-profile">
+        <div class="menu-avatar">R</div>
+        <span class="menu-name">Razik Ganteng &#128526;</span>
+        <span class="menu-tagline">Web Developer Muda</span>
+      </div>
+
+      <!-- Profile data -->
+      <div class="menu-rows">
+        <div class="menu-row">
+          <span class="menu-row-ico">&#128100;</span>
+          <span class="menu-row-lbl">Umur</span>
+          <span class="menu-row-val">Rahasia &#129323;</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-row-ico">&#127979;</span>
+          <span class="menu-row-lbl">Kelas</span>
+          <span class="menu-row-val">6</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-row-ico">&#127759;</span>
+          <span class="menu-row-lbl">Lokasi</span>
+          <span class="menu-row-val">Bumi &#127758;</span>
+        </div>
+        <div class="menu-row">
+          <span class="menu-row-ico">&#128161;</span>
+          <span class="menu-row-lbl">Dibuat</span>
+          <span class="menu-row-val">Gabut &amp; Umum &#128514;</span>
+        </div>
+      </div>
+
+      <div class="menu-div"></div>
+
+      <!-- Actions -->
+      <div class="menu-actions">
+        <button class="menu-act" id="shareBtn">
+          <span class="menu-act-ico">&#128228;</span> Bagikan
+        </button>
+        <button class="menu-act" id="resetBtn">
+          <span class="menu-act-ico">&#128260;</span> Reset ke Atas
+        </button>
+        <button class="menu-act danger" id="exitBtn">
+          <span class="menu-act-ico">&#128682;</span> Keluar Web
+        </button>
+      </div>
+
+      <div class="menu-footer">
+        &#10022; PROJEK RAZIK &#10022;<br>
+        <span style="font-size:9px;opacity:.5">v2.0 — dibuat penuh cinta</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HEADER (Easter Egg #1: klik 5x) ══ -->
+  <header class="page-header" id="pageHeader" title="Klik 5× untuk kejutan!">
+    <h1 class="page-title">Projek Razik</h1>
+    <p class="page-subtitle">Materi <span class="html-kw">HTML</span> Lengkap &amp; Interaktif</p>
+    <p class="easter-hint">&#128161; Klik judul 5&#215; untuk kejutan</p>
+  </header>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <div class="content-wrapper">
+
+    <!-- 1. Pengertian HTML -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Pengertian <span class="html-kw">HTML</span></h2>
+      <p class="section-p">
+        <span class="html-kw">HTML</span> (<em>HyperText Markup Language</em>) merupakan bahasa Markup standar yang digunakan untuk membuat dan menyusun halaman website.
+      </p>
+      <ul class="section-ul">
+        <li><span class="html-kw">HTML</span> bukan bahasa pemrograman.</li>
+        <li><span class="html-kw">HTML</span> tidak bisa berpikir, menghitung, atau mengambil keputusan.</li>
+        <li>Tugas <span class="html-kw">HTML</span>: mengatur struktur konten di halaman web.</li>
+        <li><span class="html-kw">HTML</span> menggunakan tag untuk menandai elemen-elemen di halaman web.</li>
+      </ul>
+    </div>
+
+    <!-- 2. Sejarah HTML -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Sejarah <span class="html-kw">HTML</span></h2>
+      <p class="section-p">
+        <span class="html-kw">HTML</span> adalah singkatan dari <strong>HyperText Markup Language</strong>, yaitu bahasa markup standar untuk membuat dan menyusun halaman web. Bukan bahasa pemrograman, melainkan bahasa penanda yang mengatur struktur konten website.
+      </p>
+      <h3 class="section-h3">Awal Mula <span class="html-kw">HTML</span></h3>
+      <p class="section-p">
+        <span class="html-kw">HTML</span> pertama kali dikembangkan oleh <em>Tim Berners-Lee</em> pada tahun <strong>1991</strong>, saat bekerja di <em>CERN</em> (Organisasi Riset Nuklir Eropa). Tujuannya memudahkan ilmuwan berbagi dokumen melalui internet.
+      </p>
+      <p class="section-p">
+        Versi awal <span class="html-kw">HTML</span> sangat sederhana, hanya mendukung:
+        <code class="code-inline">&lt;html&gt;</code>
+        <code class="code-inline">&lt;head&gt;</code>
+        <code class="code-inline">&lt;body&gt;</code>
+        <code class="code-inline">&lt;p&gt;</code>
+        <code class="code-inline">&lt;a&gt;</code>
+      </p>
+    </div>
+
+    <!-- 3. Perkembangan — Timeline -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Perkembangan <span class="html-kw">HTML</span></h2>
+      <div class="version-timeline">
+        <div class="version-item">
+          <div class="version-dot">2.0</div>
+          <div class="version-content">
+            <h3><span class="html-kw">HTML</span> 2.0</h3>
+            <span class="version-year">&#128197; 1995</span>
+            <p>Versi standar resmi pertama oleh <em>IETF</em>. Mendukung form sederhana: input teks dan tombol.</p>
+          </div>
+        </div>
+        <div class="version-item">
+          <div class="version-dot">3.2</div>
+          <div class="version-content">
+            <h3><span class="html-kw">HTML</span> 3.2</h3>
+            <span class="version-year">&#128197; 1997</span>
+            <p>Dikembangkan <em>W3C</em>. Menambahkan dukungan tabel, script, dan peningkatan tampilan.</p>
+          </div>
+        </div>
+        <div class="version-item">
+          <div class="version-dot">4.0</div>
+          <div class="version-content">
+            <h3><span class="html-kw">HTML</span> 4.01</h3>
+            <span class="version-year">&#128197; 1999</span>
+            <p>Sangat populer & bertahan lama. <span class="html-kw">HTML</span> dipisahkan dari tampilan — desain pakai CSS.</p>
+          </div>
+        </div>
+        <div class="version-item">
+          <div class="version-dot" style="border-color:var(--accent3);color:var(--accent3)">5</div>
+          <div class="version-content">
+            <h3><span class="html-kw">HTML5</span></h3>
+            <span class="version-year" style="color:var(--accent)">&#128197; 2008–2014</span>
+            <p>Perubahan besar: multimedia tanpa plugin, canvas, semantic tags, aplikasi web modern.</p>
+          </div>
+        </div>
+        <div class="version-item">
+          <div class="version-dot" style="border-color:var(--accent4);color:var(--accent4)">Now</div>
+          <div class="version-content">
+            <h3><span class="html-kw">HTML</span> Sekarang</h3>
+            <span class="version-year" style="color:var(--accent4)">&#128197; Masa Kini</span>
+            <p>Dipelihara <em>W3C</em> &amp; <em>WHATWG</em>. Fondasi utama web modern bersama CSS dan JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Fungsi HTML -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Fungsi <span class="html-kw">HTML</span></h2>
+      <p class="section-p"><span class="html-kw">HTML</span> berfungsi membuat dan menyusun struktur halaman website agar bisa ditampilkan browser.</p>
+      <ul class="section-ul">
+        <li>Menampilkan teks (judul, paragraf)</li>
+        <li>Menampilkan gambar</li>
+        <li>Membuat tautan / <em>link</em></li>
+        <li>Menyusun tabel, daftar, formulir, dll</li>
+        <li>Mengintegrasikan multimedia (video, audio)</li>
+        <li>Membuat form input (login, pendaftaran, dll)</li>
+      </ul>
+    </div>
+
+    <!-- 5. Cara Kerja HTML -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Cara Kerja <span class="html-kw">HTML</span></h2>
+      <ol class="section-ol">
+        <li>Developer menulis kode <span class="html-kw">HTML</span>.</li>
+        <li>File disimpan dengan ekstensi <span class="html-kw">.html</span>.</li>
+        <li>Browser membuka file <span class="html-kw">HTML</span>.</li>
+        <li>Browser membaca &amp; menerjemahkan tag <span class="html-kw">HTML</span>.</li>
+        <li>Konten ditampilkan sebagai halaman web.</li>
+      </ol>
+    </div>
+
+    <!-- 6. Tag HTML -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Tag dalam <span class="html-kw">HTML</span></h2>
+      <p class="section-p">
+        Tag adalah komponen dasar <span class="html-kw">HTML</span> untuk memberi instruksi ke browser tentang cara menampilkan konten. Ditulis dengan tanda kurung sudut <strong>&lt; &gt;</strong>.
+      </p>
+      <h3 class="section-h3">Struktur Tag</h3>
+      <ul class="section-ul">
+        <li><strong>Tag pembuka</strong> → <code class="code-inline">&lt;p&gt;</code></li>
+        <li><strong>Isi konten</strong> → teks, gambar, dll</li>
+        <li><strong>Tag penutup</strong> → <code class="code-inline">&lt;/p&gt;</code></li>
+      </ul>
+      <div class="code-block"><pre>&lt;p&gt;Ini adalah paragraf&lt;/p&gt;</pre></div>
+      <h3 class="section-h3">Jenis Tag</h3>
+      <h4 class="section-h4">1. Tag Berpasangan</h4>
+      <ul class="section-ul">
+        <li><code class="code-inline">&lt;p&gt;...&lt;/p&gt;</code></li>
+        <li><code class="code-inline">&lt;div&gt;...&lt;/div&gt;</code></li>
+        <li><code class="code-inline">&lt;h2&gt;...&lt;/h2&gt;</code></li>
+      </ul>
+      <h4 class="section-h4">2. Tag Tunggal (Self-Closing)</h4>
+      <ul class="section-ul">
+        <li><code class="code-inline">&lt;br&gt;</code> → pindah baris</li>
+        <li><code class="code-inline">&lt;hr&gt;</code> → garis horizontal</li>
+        <li><code class="code-inline">&lt;img&gt;</code> → menampilkan gambar</li>
+      </ul>
+      <h3 class="section-h3">Tag &amp; Atribut</h3>
+      <div class="code-block"><pre>&lt;img src="gambar.jpg" alt="foto"&gt;</pre></div>
+      <ul class="section-ul">
+        <li><strong>src</strong> → sumber file</li>
+        <li><strong>alt</strong> → teks alternatif</li>
+      </ul>
+    </div>
+
+    <!-- 7. Contoh Kode -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Contoh Kode <span class="html-kw">HTML</span></h2>
+      <div class="code-block">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Contoh Kode&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+  &lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+  &lt;a href="halaman.html"&gt;Klik di sini&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+    </div>
+
+    <!-- 8. Kesimpulan -->
+    <div class="section-card reveal-item">
+      <h2 class="section-h2">Kesimpulan</h2>
+      <p class="section-p">
+        Tag adalah elemen inti <span class="html-kw">HTML</span>. Tanpa tag, browser tak bisa memahami struktur halaman web. Memahami tag = langkah pertama wajib dalam belajar web development.
+      </p>
+      <p class="section-p">
+        <span class="html-kw">HTML</span> berdampingan dengan CSS dan JavaScript menjadi fondasi utama pengembangan website modern yang wajib dipahami setiap developer.
+      </p>
+    </div>
+
+  </div><!-- end .content-wrapper -->
+
+  <!-- ══ GALLERY (Easter Egg #2: double-tap/swipe-left) ══ -->
+  <section class="gallery-section reveal-item" id="gallerySection">
+    <div class="gallery-header">
+      <h2 class="gallery-title">GALERI</h2>
+      <p class="gallery-hint">&#128269; Tap gambar → fullscreen &nbsp;|&nbsp; Coba swipe kiri &#128521;</p>
+    </div>
+
+    <div class="gallery-container" id="galleryContainer">
+      <div class="gallery-viewport" id="galleryViewport">
+        <div class="gallery-track" id="galleryTrack">
+
+          <div class="gallery-item" data-idx="0" role="button" tabindex="0" aria-label="Buka gambar 1">
+            <img src="img/1.png" alt="Gambar HTML 1">
+            <div class="gallery-overlay"><span class="gallery-item-label">IMG — 01</span></div>
+            <div class="gallery-zoom-icon">&#128269;</div>
+          </div>
+
+          <div class="gallery-item" data-idx="1" role="button" tabindex="0" aria-label="Buka gambar 2">
+            <img src="img/2.png" alt="Gambar HTML 2">
+            <div class="gallery-overlay"><span class="gallery-item-label">IMG — 02</span></div>
+            <div class="gallery-zoom-icon">&#128269;</div>
+          </div>
+
+          <div class="gallery-item" data-idx="2" role="button" tabindex="0" aria-label="Buka gambar 3">
+            <img src="img/3.png" alt="Gambar HTML 3">
+            <div class="gallery-overlay"><span class="gallery-item-label">IMG — 03</span></div>
+            <div class="gallery-zoom-icon">&#128269;</div>
+          </div>
+
+          <div class="gallery-item" data-idx="3" role="button" tabindex="0" aria-label="Buka gambar 4">
+            <img src="img/4.png" alt="Gambar HTML 4">
+            <div class="gallery-overlay"><span class="gallery-item-label">IMG — 04</span></div>
+            <div class="gallery-zoom-icon">&#128269;</div>
+          </div>
+
+          <div class="gallery-item" data-idx="4" role="button" tabindex="0" aria-label="Buka gambar 5">
+            <img src="img/5.png" alt="Gambar HTML 5">
+            <div class="gallery-overlay"><span class="gallery-item-label">IMG — 05</span></div>
+            <div class="gallery-zoom-icon">&#128269;</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="gallery-controls">
+        <button class="g-ctrl" id="gUp"    title="Ke Atas / Lebih Cepat">&#9650;</button>
+        <button class="g-ctrl is-pause" id="gPause" title="Pause/Play">&#9646;&#9646;</button>
+        <button class="g-ctrl" id="gDown"  title="Ke Bawah / Lebih Cepat">&#9660;</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="gallery-dots" id="galleryDots">
+        <div class="g-dot active" data-dot="0"></div>
+        <div class="g-dot" data-dot="1"></div>
+        <div class="g-dot" data-dot="2"></div>
+        <div class="g-dot" data-dot="3"></div>
+        <div class="g-dot" data-dot="4"></div>
+         <div class="g-dot" data-dot="5"></div>
+      </div>
+
+      <div class="gallery-speed-label" id="gSpeedLabel">&#9660; AUTO</div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Easter Egg #3: tekan & tahan 2 detik) -->
+  <footer class="page-footer" id="pageFooter">
+    <span class="footer-accent">&#10022;</span> Projek Razik &copy; 2025 <span class="footer-accent">&#10022;</span><br>
+    dibuat dengan &#10084;&#65039; untuk <span class="footer-accent">Gabut &amp; Umum</span>
+    <span class="footer-hint">&#128073; Tekan &amp; tahan footer 2 detik...</span>
+  </footer>
+
+  <!-- ══ LIGHTBOX (fixed) ══ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Galeri fullscreen">
+    <div class="lb-img-wrap">
+      <div class="lb-spinner" id="lbSpinner"></div>
+      <img id="lightbox-img" src="" alt="Gambar galeri">
+    </div>
+    <button class="lb-close" id="lbClose" aria-label="Tutup">&#10005;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Sebelumnya">&#8249;</button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Berikutnya">&#8250;</button>
+    <div class="lb-counter" id="lbCounter">1 / 5</div>
+  </div>
+
+  <!-- ══ EASTER EGG ELEMENTS ══ -->
+  <!-- EE1: Fireworks -->
+  <canvas id="fw-canvas" aria-hidden="true"></canvas>
+
+  <!-- EE2: Secret swipe msg -->
+  <div class="secret-msg" id="secretMsg" role="status">
+    &#127881; Nemu secret-nya!<br>
+    <strong>"Razik adalah manusia terganteng<br>di seluruh alam semesta &#128526;"</strong><br>
+    <small>— Fakta ilmiah terbukti 100%</small>
+  </div>
+
+  <!-- EE3: Matrix canvas + popup -->
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="matrix-popup" id="matrixPopup" role="status">
+    &#9889; SISTEM DIRETAS &#9889;<br>
+    <strong>[ PESAN RAHASIA ]</strong><br>
+    <span style="color:var(--text2);font-size:10px">
+      "Kamu baru saja masuk ke dalam<br>
+      dunia tersembunyi Razik.<br>
+      Selamat datang, hacker kecil &#128526;"
+    </span>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
